@@ -3,6 +3,7 @@ enum AppRoutePath {
   home('home'),
   sponsorship('be-sponsor'),
   speakers('speakers'),
+  agenda('agenda'),
   privacyPolicy('privacy-policy'),
   termsConditions('terms-conditions');
 
