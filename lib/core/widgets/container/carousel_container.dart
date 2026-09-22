@@ -34,12 +34,10 @@ class CarouselContainer extends HookWidget {
         final timer = Timer.periodic(autoPlayDuration, (timer) {
           if (!isHovering.value && pageController.hasClients) {
             final nextPage = (pageController.page ?? 0).toInt() + 1;
-            unawaited(
-              pageController.animateToPage(
-                nextPage,
-                curve: animationCurve,
-                duration: const Duration(milliseconds: 600),
-              ),
+            pageController.animateToPage(
+              nextPage,
+              curve: animationCurve,
+              duration: const Duration(milliseconds: 600),
             );
           }
         });

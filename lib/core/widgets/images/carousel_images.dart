@@ -118,12 +118,10 @@ class _CarouselImagesState extends State<CarouselImages> {
   }
 
   void _animatePage(int index) {
-    unawaited(
-      _pageController.animateToPage(
-        index,
-        duration: const Duration(milliseconds: 500),
-        curve: Curves.easeInOut,
-      ),
+    _pageController.animateToPage(
+      index,
+      duration: const Duration(milliseconds: 500),
+      curve: Curves.easeInOut,
     );
   }
 

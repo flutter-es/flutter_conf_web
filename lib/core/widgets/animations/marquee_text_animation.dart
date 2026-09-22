@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
@@ -103,8 +101,9 @@ class _MarqueeTextAnimationState extends State<MarqueeTextAnimation>
           milliseconds: (totalWidth / widget.speed * 1000).toInt(),
         );
 
-        unawaited(_animationController.forward(from: 0));
-        unawaited(_animationController.repeat());
+        _animationController
+          ..forward(from: 0)
+          ..repeat();
       }
     });
   }

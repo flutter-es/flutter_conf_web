@@ -1,8 +1,6 @@
 // Set this to avoid cast for RenderObject
 // ignore_for_file: cast_nullable_to_non_nullable
 
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 
 const _shimmerGradient = LinearGradient(
@@ -34,12 +32,10 @@ class ShimmerState extends State<Shimmer> with SingleTickerProviderStateMixin {
     super.initState();
 
     _shimmerController = .unbounded(vsync: this);
-    unawaited(
-      _shimmerController.repeat(
-        min: -.5,
-        max: 1.5,
-        period: const Duration(milliseconds: 1000),
-      ),
+    _shimmerController.repeat(
+      min: -.5,
+      max: 1.5,
+      period: const Duration(milliseconds: 1000),
     );
   }
 
