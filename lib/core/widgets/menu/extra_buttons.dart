@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/dependencies.dart';
 import 'package:flutter_conf_latam/core/routes/app_route_path.dart';
+import 'package:flutter_conf_latam/core/seo/seo_config.dart';
 import 'package:flutter_conf_latam/core/utils/utils.dart';
 import 'package:flutter_conf_latam/core/widgets/button/fcl_button.dart';
 import 'package:flutter_conf_latam/core/widgets/dialog/data_protection_dialog.dart';
@@ -47,6 +48,17 @@ class ExtraButtons extends SignalWidget {
           } else {
             unawaited(Utils.launchUrlLink(config.ticketPageUrl));
           }
+        },
+      ),
+      FclButton.secondary(
+        label: l10n.menuAgendaButton,
+        buttonSize: .small,
+        onPressed: () {
+          unawaited(
+            Utils.launchUrlLink(
+              '${SeoConfig.baseUrl}/${AppRoutePath.agenda.pathName}',
+            ),
+          );
         },
       ),
     ];
