@@ -5,6 +5,7 @@
       {
         "appID": "UDU6GKR257.dev.flutterconflatam.app",
         "paths": [
+          "/agenda",
           "/agenda/*",
           "/speakers/*",
           "/home",
