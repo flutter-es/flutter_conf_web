@@ -2,6 +2,7 @@ import 'package:flutter_conf_latam/core/routes/helpers/navigation_item_model.dar
 import 'package:flutter_conf_latam/core/widgets/menu/extra_buttons.dart';
 import 'package:flutter_conf_latam/core/widgets/menu/language_button.dart';
 import 'package:flutter_conf_latam/core/widgets/menu/sub_menu_button.dart';
+import 'package:flutter_conf_latam/core/widgets/menu/use_material_ui_tab_controller.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/generated/assets.gen.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
@@ -18,7 +19,7 @@ class HeaderMenu extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final theme = context.theme.fclThemeScheme;
-    final tabController = useTabController(
+    final tabController = useMaterialUiTabController(
       initialLength: tabItems.length,
       initialIndex: tabItems.indexWhere((item) => item.isSelected),
     );
