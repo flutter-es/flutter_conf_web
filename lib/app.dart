@@ -17,14 +17,14 @@ extension type JSWindow._(JSObject _) implements JSObject {
   external int get initTime;
 }
 
-class FlutterConfApp extends SignalStatefulWidget {
+class FlutterConfWeb extends SignalStatefulWidget {
   const new({super.key});
 
   @override
-  State<FlutterConfApp> createState() => _FlutterConfAppState();
+  State<FlutterConfWeb> createState() => _FlutterConfWebState();
 }
 
-class _FlutterConfAppState extends State<FlutterConfApp> {
+class _FlutterConfWebState extends State<FlutterConfWeb> {
   final _appRoutes = AppRoutes();
 
   @override
@@ -62,7 +62,10 @@ class _FlutterConfAppState extends State<FlutterConfApp> {
       locale: appLocale,
       routerConfig: _appRoutes.router,
       supportedLocales: AppLocalizations.supportedLocales,
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      localizationsDelegates: const [
+        ...AppLocalizations.localizationsDelegates,
+        ...GlobalMaterialLocalizations.delegates,
+      ],
       scrollBehavior: const MaterialScrollBehavior().copyWith(
         dragDevices: {.mouse, .touch, .stylus, .unknown},
       ),
