@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/core/routes/app_route_path.dart';
 import 'package:flutter_conf_latam/core/routes/helpers/navigation_view_model.dart';
@@ -11,10 +10,11 @@ import 'package:flutter_conf_latam/features/speakers/presentation/view_model/spe
 import 'package:flutter_conf_latam/l10n/localization_provider.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 class HomeSpeakers extends SignalWidget {
-  const HomeSpeakers({super.key});
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +71,7 @@ class HomeSpeakers extends SignalWidget {
 }
 
 class _RedirectSpeakersCard extends SignalWidget {
-  const _RedirectSpeakersCard();
+  const new();
 
   @override
   Widget build(BuildContext context) {

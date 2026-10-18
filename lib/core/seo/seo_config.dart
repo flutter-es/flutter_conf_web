@@ -1,5 +1,5 @@
 class SeoConfig {
-  const SeoConfig({
+  const new({
     required this.title,
     required this.description,
     this.keywords = const [],
@@ -93,11 +93,7 @@ class SeoConfig {
       description:
           'Revive los mejores momentos de Flutter Conf Latam. '
           'Fotos de ediciones anteriores, talleres, charlas y networking.',
-      keywords: [
-        'Flutter Conf Photos',
-        'Event Gallery',
-        'Conference Memories',
-      ],
+      keywords: ['Flutter Conf Photos', 'Event Gallery', 'Conference Memories'],
       imageUrl: defaultImageUrl,
     ),
     '/organizers': SeoConfig(
@@ -105,11 +101,7 @@ class SeoConfig {
       description:
           'Conoce al equipo organizador y comunidades aliadas '
           'detrás de Flutter Conf Latam 2026.',
-      keywords: [
-        'Flutter Community',
-        'Organizers',
-        'Flutter Latam',
-      ],
+      keywords: ['Flutter Community', 'Organizers', 'Flutter Latam'],
       imageUrl: defaultImageUrl,
     ),
     '/contact': SeoConfig(
@@ -117,12 +109,7 @@ class SeoConfig {
       description:
           'Ponte en contacto con el equipo de Flutter Conf Latam. '
           'Sponsors, prensa, preguntas generales.',
-      keywords: [
-        'Contact',
-        'Flutter Conf Contact',
-        'Sponsors',
-        'Press',
-      ],
+      keywords: ['Contact', 'Flutter Conf Contact', 'Sponsors', 'Press'],
       imageUrl: defaultImageUrl,
     ),
     '/privacy-policy': SeoConfig(

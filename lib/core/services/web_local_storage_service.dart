@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class WebLocalStorageService {
-  WebLocalStorageService({required this.preferences});
+  new({required this.preferences});
 
   final SharedPreferences preferences;
 

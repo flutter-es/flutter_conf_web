@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:material_ui/material_ui.dart';
 
 class CarouselContainer extends HookWidget {
-  const CarouselContainer({
+  const new({
     required this.items,
     this.itemSize,
     this.height = 400,
@@ -29,22 +29,19 @@ class CarouselContainer extends HookWidget {
       viewportFraction: .35,
     );
 
-    useEffect(
-      () {
-        final timer = Timer.periodic(autoPlayDuration, (timer) {
-          if (!isHovering.value && pageController.hasClients) {
-            final nextPage = (pageController.page ?? 0).toInt() + 1;
-            pageController.animateToPage(
-              nextPage,
-              curve: animationCurve,
-              duration: const Duration(milliseconds: 600),
-            );
-          }
-        });
-        return timer.cancel;
-      },
-      const [],
-    );
+    useEffect(() {
+      final timer = Timer.periodic(autoPlayDuration, (timer) {
+        if (!isHovering.value && pageController.hasClients) {
+          final nextPage = (pageController.page ?? 0).toInt() + 1;
+          pageController.animateToPage(
+            nextPage,
+            curve: animationCurve,
+            duration: const Duration(milliseconds: 600),
+          );
+        }
+      });
+      return timer.cancel;
+    }, const []);
 
     return SizedBox(
       height: itemSize?.height ?? height,

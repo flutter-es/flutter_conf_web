@@ -1,14 +1,13 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 enum ScreenSize {
   small(300),
   normal(400),
   large(600),
-  extraLarge(1200)
-  ;
+  extraLarge(1200);
 
-  const ScreenSize(this.size);
+  new(this.size);
 
   final double size;
 }

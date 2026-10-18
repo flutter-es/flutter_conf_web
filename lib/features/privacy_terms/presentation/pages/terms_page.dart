@@ -1,14 +1,14 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/dependencies.dart';
 import 'package:flutter_conf_latam/core/widgets/container/footer.dart';
 import 'package:flutter_conf_latam/features/privacy_terms/presentation/view_model/privacy_terms_view_model.dart';
 import 'package:flutter_conf_latam/features/privacy_terms/presentation/widgets/markdown_container.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 class TermsPage extends SignalStatefulWidget {
-  const TermsPage({super.key});
+  const new({super.key});
 
   @override
   State<TermsPage> createState() => _TermsPageState();
@@ -39,7 +39,7 @@ class _TermsPageState extends State<TermsPage> {
 }
 
 class _TermsMain extends SignalWidget {
-  const _TermsMain();
+  const new();
 
   @override
   Widget build(BuildContext context) {

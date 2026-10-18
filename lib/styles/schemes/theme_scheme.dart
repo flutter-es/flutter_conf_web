@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/styles/schemes/color_scheme.dart';
 import 'package:flutter_conf_latam/styles/schemes/typography_scheme.dart';
+import 'package:material_ui/material_ui.dart';
 
 class FclThemeScheme extends ThemeExtension<FclThemeScheme> {
-  FclThemeScheme({required this.colorScheme, required this.typography});
+  new({required this.colorScheme, required this.typography});
 
   final FclColorScheme colorScheme;
   final FclTypographyScheme typography;

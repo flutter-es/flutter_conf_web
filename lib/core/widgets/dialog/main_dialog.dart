@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
+import 'package:material_ui/material_ui.dart';
 
 class MainDialog extends StatelessWidget {
-  const MainDialog({required this.child, super.key});
+  const new({required this.child, super.key});
 
   final Widget child;
 

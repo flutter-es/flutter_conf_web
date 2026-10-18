@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/core/widgets/card/speaker_card_item.dart';
 import 'package:flutter_conf_latam/core/widgets/container/error_container.dart';
@@ -11,10 +10,11 @@ import 'package:flutter_conf_latam/core/widgets/images/single_image.dart';
 import 'package:flutter_conf_latam/core/widgets/text/title_subtitle_text.dart';
 import 'package:flutter_conf_latam/features/speakers/presentation/view_model/speakers_view_model.dart';
 import 'package:flutter_conf_latam/l10n/localization_provider.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 class SpeakersMain extends SignalWidget {
-  const SpeakersMain({super.key});
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -64,10 +64,7 @@ class SpeakersMain extends SignalWidget {
                       child: Column(
                         spacing: 20,
                         children: <Widget>[
-                          SingleImageContainer(
-                            size: size,
-                            borderRadius: 30,
-                          ),
+                          SingleImageContainer(size: size, borderRadius: 30),
                           const TitleSubtitleTextContainer(),
                           const SocialMediaRowContainer(),
                         ],
@@ -86,7 +83,7 @@ class SpeakersMain extends SignalWidget {
 }
 
 class _SpeakerListContainer extends StatelessWidget {
-  const _SpeakerListContainer({required this.children});
+  const new({required this.children});
 
   final List<Widget> children;
 

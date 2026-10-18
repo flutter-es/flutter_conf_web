@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/core/widgets/container/section_container.dart';
 import 'package:flutter_conf_latam/core/widgets/text/title_subtitle_text.dart';
@@ -6,10 +5,11 @@ import 'package:flutter_conf_latam/features/sponsorship/domain/models/sponsorshi
 import 'package:flutter_conf_latam/l10n/localization_provider.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 class SponsorshipBenefitsSection extends SignalWidget {
-  const SponsorshipBenefitsSection({super.key});
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +51,7 @@ class SponsorshipBenefitsSection extends SignalWidget {
 }
 
 class _BenefitsTable extends SignalWidget {
-  const _BenefitsTable({required this.packages});
+  const new({required this.packages});
 
   final List<SponsorshipPackageModel> packages;
 
@@ -151,7 +151,7 @@ class _BenefitsTable extends SignalWidget {
 }
 
 class _TableCell extends StatelessWidget {
-  const _TableCell({
+  const new({
     required this.text,
     this.isHeader = false,
     this.isLabel = false,
@@ -201,7 +201,7 @@ class _TableCell extends StatelessWidget {
 }
 
 class _CheckBadge extends StatelessWidget {
-  const _CheckBadge();
+  const new();
 
   @override
   Widget build(BuildContext context) {

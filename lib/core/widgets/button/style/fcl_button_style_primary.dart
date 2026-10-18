@@ -1,7 +1,7 @@
 part of '../fcl_button.dart';
 
 class _FclButtonStylePrimary extends _FclButtonStyle {
-  const _FclButtonStylePrimary({
+  const new({
     required super.buttonSize,
     required super.theme,
     super.textSize,

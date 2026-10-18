@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/core/routes/app_route_path.dart';
 import 'package:flutter_conf_latam/core/routes/helpers/navigation_view_model.dart';
@@ -11,10 +10,11 @@ import 'package:flutter_conf_latam/styles/generated/assets.gen.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 class Footer extends SignalWidget {
-  const Footer({super.key});
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -116,10 +116,8 @@ class Footer extends SignalWidget {
                   mainAxisAlignment: .spaceBetween,
                   children: footerChildren,
                 ),
-                .normal || .small => Column(
-                  spacing: 16,
-                  children: footerChildren,
-                ),
+                .normal ||
+                .small => Column(spacing: 16, children: footerChildren),
               },
             ],
           ),
@@ -170,7 +168,7 @@ class Footer extends SignalWidget {
 }
 
 class _SocialFooter extends SignalWidget {
-  const _SocialFooter();
+  const new();
 
   @override
   Widget build(BuildContext context) {
@@ -218,7 +216,7 @@ class _SocialFooter extends SignalWidget {
 }
 
 class _SocialVideos extends SignalWidget {
-  const _SocialVideos();
+  const new();
 
   @override
   Widget build(BuildContext context) {

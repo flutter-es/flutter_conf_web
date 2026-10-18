@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_layout_grid/flutter_layout_grid.dart';
+import 'package:material_ui/material_ui.dart';
 
 class ResponsiveGrid extends StatelessWidget {
-  const ResponsiveGrid({
+  const new({
     required this.children,
     required this.columnSizes,
     required this.rowSizes,

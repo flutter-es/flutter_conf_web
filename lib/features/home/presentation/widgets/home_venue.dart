@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_core/flutter_conf_core.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/core/utils/utils.dart';
@@ -15,10 +14,11 @@ import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/generated/assets.gen.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 class HomeVenue extends SignalWidget {
-  const HomeVenue({super.key});
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -166,7 +166,7 @@ class HomeVenue extends SignalWidget {
 }
 
 class _VenuePlaceholderCard extends StatelessWidget {
-  const _VenuePlaceholderCard({required this.name});
+  const new({required this.name});
 
   final String name;
 
@@ -215,7 +215,7 @@ class _VenuePlaceholderCard extends StatelessWidget {
 }
 
 class _VenueTipsGrid extends StatelessWidget {
-  const _VenueTipsGrid({required this.tips});
+  const new({required this.tips});
 
   final List<VenueTipEntity> tips;
 
@@ -250,7 +250,7 @@ class _VenueTipsGrid extends StatelessWidget {
 }
 
 class _VenueTipCard extends StatelessWidget {
-  const _VenueTipCard({required this.tip});
+  const new({required this.tip});
 
   final VenueTipEntity tip;
 
@@ -270,21 +270,18 @@ class _VenueTipCard extends StatelessWidget {
           spacing: 12,
           crossAxisAlignment: .start,
           children: <Widget>[
-            Icon(
-              switch (tip.category) {
-                .accommodation => Icons.hotel_rounded,
-                .transportation => Icons.directions_transit_rounded,
-                .deliveryApps => Icons.storefront_rounded,
-                .food => Icons.restaurant_rounded,
-                .security => Icons.security_rounded,
-                .weather => Icons.wb_sunny_rounded,
-                .currency => Icons.currency_exchange_rounded,
-                .language => Icons.translate_rounded,
-                .emergency => Icons.local_hospital_rounded,
-                .other => Icons.info_outline_rounded,
-              },
-              color: FlutterLatamColors.mediumBlue,
-            ),
+            Icon(switch (tip.category) {
+              .accommodation => Icons.hotel_rounded,
+              .transportation => Icons.directions_transit_rounded,
+              .deliveryApps => Icons.storefront_rounded,
+              .food => Icons.restaurant_rounded,
+              .security => Icons.security_rounded,
+              .weather => Icons.wb_sunny_rounded,
+              .currency => Icons.currency_exchange_rounded,
+              .language => Icons.translate_rounded,
+              .emergency => Icons.local_hospital_rounded,
+              .other => Icons.info_outline_rounded,
+            }, color: FlutterLatamColors.mediumBlue),
             Expanded(
               child: Column(
                 spacing: 4,

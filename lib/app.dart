@@ -1,13 +1,13 @@
 import 'dart:async';
 import 'dart:js_interop';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_core/flutter_conf_core.dart';
 import 'package:flutter_conf_latam/core/dependencies.dart';
 import 'package:flutter_conf_latam/core/routes/app_routes.dart';
 import 'package:flutter_conf_latam/l10n/gen/app_localizations.dart';
 import 'package:flutter_conf_latam/l10n/localization_provider.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 @JS('window')
@@ -18,7 +18,7 @@ extension type JSWindow._(JSObject _) implements JSObject {
 }
 
 class FlutterConfApp extends SignalStatefulWidget {
-  const FlutterConfApp({super.key});
+  const new({super.key});
 
   @override
   State<FlutterConfApp> createState() => _FlutterConfAppState();

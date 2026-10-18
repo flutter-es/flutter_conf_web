@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_core/flutter_conf_core.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/core/routes/app_route_path.dart';
@@ -14,10 +13,11 @@ import 'package:flutter_conf_latam/styles/theme.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 class HomeSponsors extends SignalWidget {
-  const HomeSponsors({super.key});
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -95,9 +95,8 @@ class HomeSponsors extends SignalWidget {
               child: FclButton.secondary(
                 label: l10n.homeSponsorsWantToBeButton,
                 buttonSize: .large,
-                onPressed: () => context.go(
-                  '/${AppRoutePath.sponsorship.pathName}',
-                ),
+                onPressed: () =>
+                    context.go('/${AppRoutePath.sponsorship.pathName}'),
               ),
             ),
           ],
@@ -109,7 +108,7 @@ class HomeSponsors extends SignalWidget {
 }
 
 class _SectionLabel extends StatelessWidget {
-  const _SectionLabel({required this.text, required this.color});
+  const new({required this.text, required this.color});
 
   final String text;
   final Color color;
@@ -130,7 +129,7 @@ class _SectionLabel extends StatelessWidget {
 }
 
 class _CurrentSponsorsGrid extends StatelessWidget {
-  const _CurrentSponsorsGrid({required this.sponsors});
+  const new({required this.sponsors});
 
   final List<SponsorEntity> sponsors;
 
@@ -167,7 +166,7 @@ class _CurrentSponsorsGrid extends StatelessWidget {
 }
 
 class _CurrentSponsorCard extends HookWidget {
-  const _CurrentSponsorCard({required this.sponsor, required this.cardWidth});
+  const new({required this.sponsor, required this.cardWidth});
 
   final SponsorEntity sponsor;
   final double? cardWidth;
@@ -268,7 +267,7 @@ class _CurrentSponsorCard extends HookWidget {
 }
 
 class _PastSponsorsCarousel extends StatefulWidget {
-  const _PastSponsorsCarousel({required this.sponsors});
+  const new({required this.sponsors});
 
   final List<SponsorEntity> sponsors;
 
@@ -337,7 +336,7 @@ class _PastSponsorsCarouselState extends State<_PastSponsorsCarousel> {
 }
 
 class _PastSponsorCard extends HookWidget {
-  const _PastSponsorCard({required this.sponsor});
+  const new({required this.sponsor});
 
   final SponsorEntity sponsor;
 
@@ -385,7 +384,7 @@ class _PastSponsorCard extends HookWidget {
 }
 
 class _GrayscaleLogo extends StatelessWidget {
-  const _GrayscaleLogo({required this.url, required this.isHovered});
+  const new({required this.url, required this.isHovered});
 
   final String url;
   final bool isHovered;

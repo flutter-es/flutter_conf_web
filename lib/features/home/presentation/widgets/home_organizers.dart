@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:collection/collection.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/providers/shared_providers.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/core/utils/utils.dart';
@@ -16,10 +15,11 @@ import 'package:flutter_conf_latam/core/widgets/images/single_image.dart';
 import 'package:flutter_conf_latam/core/widgets/text/title_subtitle_text.dart';
 import 'package:flutter_conf_latam/features/home/presentation/view_model/home_signals.dart';
 import 'package:flutter_conf_latam/l10n/localization_provider.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 class OrganizersPeople extends SignalStatefulWidget {
-  const OrganizersPeople({super.key});
+  const new({super.key});
 
   @override
   State<OrganizersPeople> createState() => _OrganizersPeopleState();
@@ -134,7 +134,7 @@ class _OrganizersPeopleState extends State<OrganizersPeople> {
 }
 
 class _OrganizerPeopleGrid extends StatelessWidget {
-  const _OrganizerPeopleGrid({required this.children});
+  const new({required this.children});
 
   final List<Widget> children;
 
@@ -156,7 +156,7 @@ class _OrganizerPeopleGrid extends StatelessWidget {
 }
 
 class OrganizersCommunities extends SignalWidget {
-  const OrganizersCommunities({super.key});
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -227,7 +227,7 @@ class OrganizersCommunities extends SignalWidget {
 }
 
 class _OrganizerCommunitiesGrid extends StatelessWidget {
-  const _OrganizerCommunitiesGrid({required this.children});
+  const new({required this.children});
 
   final List<Widget> children;
 

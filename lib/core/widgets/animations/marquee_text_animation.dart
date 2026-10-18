@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
+import 'package:material_ui/material_ui.dart';
 
 class MarqueeTextAnimation extends StatefulWidget {
-  const MarqueeTextAnimation({required this.text, this.speed = 80, super.key});
+  const new({required this.text, this.speed = 80, super.key});
 
   final String text;
   final double speed;

@@ -1,15 +1,11 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_core/flutter_conf_core.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/core/widgets/images/character_image.dart';
 import 'package:flutter_conf_latam/core/widgets/text/title_subtitle_text.dart';
+import 'package:material_ui/material_ui.dart';
 
 class SpeakerCardItem extends StatelessWidget {
-  const SpeakerCardItem({
-    required this.speaker,
-    required this.imageSize,
-    super.key,
-  });
+  const new({required this.speaker, required this.imageSize, super.key});
 
   final SpeakerEntity speaker;
   final Size imageSize;

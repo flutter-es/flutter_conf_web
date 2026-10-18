@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
+import 'package:material_ui/material_ui.dart';
 
 class ScreenPage<T> extends Page<T> {
-  const ScreenPage({required super.key, required this.child});
+  const new({required super.key, required this.child});
 
   final Widget child;
 
@@ -13,7 +13,7 @@ class ScreenPage<T> extends Page<T> {
 }
 
 class ModalBottomPage<T> extends Page<T> {
-  const ModalBottomPage({
+  const new({
     required super.key,
     required this.child,
     this.isDismissible = true,
@@ -52,10 +52,8 @@ class ModalBottomPage<T> extends Page<T> {
             true => DraggableScrollableSheet(
               expand: false,
               initialChildSize: initialChildSize,
-              builder: (_, controller) => SingleChildScrollView(
-                controller: controller,
-                child: child,
-              ),
+              builder: (_, controller) =>
+                  SingleChildScrollView(controller: controller, child: child),
             ),
             false => child,
           };
@@ -69,7 +67,7 @@ class ModalBottomPage<T> extends Page<T> {
 typedef SizeFactor = ({double width, double height});
 
 class DialogPage<T> extends Page<T> {
-  const DialogPage({
+  const new({
     required super.key,
     required this.child,
     this.sizeFactor = (width: .6, height: .6),

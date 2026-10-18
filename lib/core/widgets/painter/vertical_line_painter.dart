@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 class VerticalLinePainter extends CustomPainter {
-  const VerticalLinePainter({required this.getX, required this.color});
+  const new({required this.getX, required this.color});
 
   final double Function(double width) getX;
   final Color color;

@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/seo/meta_tags_manager.dart';
 import 'package:flutter_conf_latam/core/seo/seo_config.dart';
 import 'package:flutter_conf_latam/core/seo/structured_data_builder.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:universal_html/html.dart' as html;
 
 class SeoRouteObserver extends NavigatorObserver {

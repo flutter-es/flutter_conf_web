@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/core/widgets/animations/flutter_rive_animated.dart';
 import 'package:flutter_conf_latam/styles/generated/assets.gen.dart';
+import 'package:material_ui/material_ui.dart';
 
 class PageLoading extends StatelessWidget {
-  const PageLoading({super.key});
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {

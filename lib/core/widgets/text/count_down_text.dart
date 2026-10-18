@@ -1,15 +1,15 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/core/widgets/text/title_subtitle_text.dart';
 import 'package:flutter_conf_latam/l10n/localization_provider.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 class CountDownText extends SignalStatefulWidget {
-  const CountDownText({
+  const new({
     required this.startDate,
     required this.endDate,
     this.label,
@@ -160,7 +160,7 @@ class _CountDownTextState extends State<CountDownText> {
 }
 
 class _CountdownUnit extends StatelessWidget {
-  const _CountdownUnit({
+  const new({
     required this.value,
     required this.label,
     required this.cardSize,

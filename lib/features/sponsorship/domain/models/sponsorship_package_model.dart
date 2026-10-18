@@ -4,7 +4,7 @@ enum SponsorshipTier { platinum, gold, silver, bronze }
 
 @immutable
 class SponsorshipPackageModel {
-  const SponsorshipPackageModel({
+  const new({
     required this.tier,
     required this.regularPrice,
     required this.promoPrice,

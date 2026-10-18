@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/core/widgets/icons/circle_icon.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
+import 'package:material_ui/material_ui.dart';
 
 class DialogContainer extends StatelessWidget {
-  const DialogContainer({required this.child, super.key});
+  const new({required this.child, super.key});
 
   final Widget child;
 
@@ -26,7 +26,7 @@ class DialogContainer extends StatelessWidget {
 }
 
 class _CloseButton extends StatelessWidget {
-  const _CloseButton({required this.onClose});
+  const new({required this.onClose});
 
   final VoidCallback onClose;
 

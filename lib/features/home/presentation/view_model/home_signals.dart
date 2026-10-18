@@ -68,9 +68,10 @@ final organizersSignal = computed<AsyncState<OrganizersInfo>>(() {
       final endIndex = startIndex + pagination.pageSize;
 
       if (startIndex >= list.length) {
-        return AsyncState.data(
-          (organizerList: <OrganizerEntity>[], totalList: 0),
-        );
+        return AsyncState.data((
+          organizerList: <OrganizerEntity>[],
+          totalList: 0,
+        ));
       }
 
       return AsyncState.data((

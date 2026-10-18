@@ -1,14 +1,14 @@
 import 'dart:math';
 
-import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_conf_latam/l10n/localization_provider.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 class PaginationContainer extends SignalWidget {
-  const PaginationContainer({
+  const new({
     required this.child,
     required this.totalSize,
     required this.pageSize,
@@ -75,7 +75,7 @@ class PaginationContainer extends SignalWidget {
 }
 
 class _PaginationNumberButtons extends SignalWidget {
-  const _PaginationNumberButtons({
+  const new({
     required this.currentPage,
     required this.totalPages,
     required this.onSendPage,
@@ -142,7 +142,7 @@ class _PaginationNumberButtons extends SignalWidget {
 }
 
 class _PaginationButton extends StatelessWidget {
-  const _PaginationButton({
+  const new({
     required this.semanticLabel,
     required this.child,
     this.onPressed,

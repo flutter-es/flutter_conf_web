@@ -1,12 +1,12 @@
 import 'package:flutter/gestures.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/core/utils/utils.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
+import 'package:material_ui/material_ui.dart';
 
 class GridCardItem extends StatelessWidget {
-  const GridCardItem({
+  const new({
     required this.title,
     required this.description,
     this.imagePath,

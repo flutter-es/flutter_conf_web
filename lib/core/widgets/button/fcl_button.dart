@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
+import 'package:material_ui/material_ui.dart';
 
 part 'style/fcl_button_style.dart';
 
@@ -15,7 +15,7 @@ enum ButtonSize { small, large }
 enum ButtonTextSize { small, medium, large }
 
 class FclButton extends StatelessWidget {
-  const FclButton.primary({
+  const new primary({
     required this.label,
     required this.onPressed,
     required this.buttonSize,
@@ -26,7 +26,7 @@ class FclButton extends StatelessWidget {
     super.key,
   }) : variant = .primary;
 
-  const FclButton.secondary({
+  const new secondary({
     required this.label,
     required this.onPressed,
     required this.buttonSize,
@@ -34,8 +34,8 @@ class FclButton extends StatelessWidget {
     this.icon,
     this.textSize,
     super.key,
-  })  : variant = .secondary,
-        color = null;
+  }) : variant = .secondary,
+       color = null;
 
   final String label;
   final ButtonVariant variant;

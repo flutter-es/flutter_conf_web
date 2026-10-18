@@ -1,7 +1,7 @@
 import 'package:flutter_conf_latam/l10n/gen/app_localizations.dart';
 
 final class EditionModel {
-  const EditionModel({
+  const new({
     required this.year,
     required this.flag,
     required this.city,

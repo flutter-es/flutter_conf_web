@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/dependencies.dart';
 import 'package:flutter_conf_latam/core/widgets/container/footer.dart';
 import 'package:flutter_conf_latam/features/sponsorship/presentation/widgets/sponsorship_benefits_section.dart';
@@ -10,9 +9,10 @@ import 'package:flutter_conf_latam/features/sponsorship/presentation/widgets/spo
 import 'package:flutter_conf_latam/features/sponsorship/presentation/widgets/sponsorship_pdf_section.dart';
 import 'package:flutter_conf_latam/features/sponsorship/presentation/widgets/sponsorship_startup_section.dart';
 import 'package:flutter_conf_latam/features/sponsorship/presentation/widgets/sponsorship_why_section.dart';
+import 'package:material_ui/material_ui.dart';
 
 class SponsorshipPage extends StatefulWidget {
-  const SponsorshipPage({super.key});
+  const new({super.key});
 
   @override
   State<SponsorshipPage> createState() => _SponsorshipPageState();
@@ -23,9 +23,7 @@ class _SponsorshipPageState extends State<SponsorshipPage> {
   void initState() {
     super.initState();
     unawaited(
-      analyticsRepository.value.logScreenView(
-        screenName: 'sponsorship_page',
-      ),
+      analyticsRepository.value.logScreenView(screenName: 'sponsorship_page'),
     );
   }
 

@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/core/widgets/button/fcl_button.dart';
+import 'package:material_ui/material_ui.dart';
 
 class OptionButtonList extends StatelessWidget {
-  const OptionButtonList({
+  const new({
     required this.options,
     required this.selectedValue,
     required this.onChanged,

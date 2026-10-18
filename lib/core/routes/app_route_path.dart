@@ -7,7 +7,7 @@ enum AppRoutePath {
   privacyPolicy('privacy-policy'),
   termsConditions('terms-conditions');
 
-  const AppRoutePath(this.pathName);
+  new(this.pathName);
 
   final String pathName;
 }

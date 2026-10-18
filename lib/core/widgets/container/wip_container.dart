@@ -1,12 +1,12 @@
 import 'dart:math' as math;
 
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/widgets/animations/flutter_rive_animated.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/generated/assets.gen.dart';
+import 'package:material_ui/material_ui.dart';
 
 class WipContainer extends StatelessWidget {
-  const WipContainer({super.key});
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {

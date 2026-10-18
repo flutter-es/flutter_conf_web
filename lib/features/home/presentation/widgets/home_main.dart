@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/dependencies.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/core/routes/app_route_path.dart';
@@ -12,10 +11,11 @@ import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/generated/assets.gen.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
 import 'package:go_router/go_router.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 class HomeMain extends SignalWidget {
-  const HomeMain({super.key});
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -84,16 +84,14 @@ class HomeMain extends SignalWidget {
           FclButton.primary(
             label: appLocalizations.value.menuBuyTicketsButton,
             buttonSize: .large,
-            onPressed: () => unawaited(
-              Utils.launchUrlLink(appConfig.value.ticketPageUrl),
-            ),
+            onPressed: () =>
+                unawaited(Utils.launchUrlLink(appConfig.value.ticketPageUrl)),
           ),
           FclButton.secondary(
             label: appLocalizations.value.menuBeSponsorButton,
             buttonSize: .large,
-            onPressed: () => context.go(
-              '/${AppRoutePath.sponsorship.pathName}',
-            ),
+            onPressed: () =>
+                context.go('/${AppRoutePath.sponsorship.pathName}'),
           ),
         ],
       ),
@@ -104,16 +102,14 @@ class HomeMain extends SignalWidget {
           FclButton.primary(
             label: appLocalizations.value.menuBuyTicketsButton,
             buttonSize: .large,
-            onPressed: () => unawaited(
-              Utils.launchUrlLink(appConfig.value.ticketPageUrl),
-            ),
+            onPressed: () =>
+                unawaited(Utils.launchUrlLink(appConfig.value.ticketPageUrl)),
           ),
           FclButton.secondary(
             label: appLocalizations.value.menuBeSponsorButton,
             buttonSize: .large,
-            onPressed: () => context.go(
-              '/${AppRoutePath.sponsorship.pathName}',
-            ),
+            onPressed: () =>
+                context.go('/${AppRoutePath.sponsorship.pathName}'),
           ),
         ],
       ),
@@ -185,17 +181,14 @@ class HomeMain extends SignalWidget {
             ),
           ],
         ),
-        CountDownText(
-          startDate: .now(),
-          endDate: DateTime(2026, 9, 22, 7, 30),
-        ),
+        CountDownText(startDate: .now(), endDate: DateTime(2026, 9, 22, 7, 30)),
       ],
     );
   }
 }
 
 class _HeroBackground extends StatelessWidget {
-  const _HeroBackground();
+  const new();
 
   @override
   Widget build(BuildContext context) {
@@ -223,7 +216,7 @@ class _HeroBackground extends StatelessWidget {
 }
 
 class _HeroBadge extends StatelessWidget {
-  const _HeroBadge({required this.text});
+  const new({required this.text});
 
   final String text;
 

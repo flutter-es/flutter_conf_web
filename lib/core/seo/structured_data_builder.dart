@@ -104,14 +104,14 @@ class StructuredDataBuilder {
 }
 
 class BreadcrumbItem {
-  const BreadcrumbItem({required this.name, required this.url});
+  const new({required this.name, required this.url});
 
   final String name;
   final String url;
 }
 
 class FaqItem {
-  const FaqItem({required this.question, required this.answer});
+  const new({required this.question, required this.answer});
 
   final String question;
   final String answer;

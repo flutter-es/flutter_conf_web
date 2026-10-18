@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/models/edition_model.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/core/widgets/container/section_container.dart';
@@ -7,10 +6,11 @@ import 'package:flutter_conf_latam/core/widgets/text/title_subtitle_text.dart';
 import 'package:flutter_conf_latam/l10n/localization_provider.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 class HomeTimeline extends SignalWidget {
-  const HomeTimeline({super.key});
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ class HomeTimeline extends SignalWidget {
 }
 
 class _TimelineSection extends StatefulWidget {
-  const _TimelineSection({required this.editions});
+  const new({required this.editions});
 
   final List<EditionModel> editions;
 
@@ -127,7 +127,7 @@ class _TimelineSectionState extends State<_TimelineSection> {
 }
 
 class _DesktopTimeline extends StatelessWidget {
-  const _DesktopTimeline({
+  const new({
     required this.editions,
     required this.keys,
     required this.visible,
@@ -180,7 +180,7 @@ class _DesktopTimeline extends StatelessWidget {
 }
 
 class _MobileTimeline extends StatelessWidget {
-  const _MobileTimeline({
+  const new({
     required this.editions,
     required this.keys,
     required this.visible,
@@ -222,7 +222,7 @@ class _MobileTimeline extends StatelessWidget {
 }
 
 class _AnimatedItem extends StatelessWidget {
-  const _AnimatedItem({
+  const new({
     required this.itemKey,
     required this.visible,
     required this.child,
@@ -252,7 +252,7 @@ class _AnimatedItem extends StatelessWidget {
 }
 
 class _TimelineDot extends StatelessWidget {
-  const _TimelineDot({required this.isCurrent});
+  const new({required this.isCurrent});
 
   final bool isCurrent;
 
@@ -306,7 +306,7 @@ class _TimelineDot extends StatelessWidget {
 }
 
 class _EditionCard extends SignalWidget {
-  const _EditionCard({required this.edition});
+  const new({required this.edition});
 
   final EditionModel edition;
 

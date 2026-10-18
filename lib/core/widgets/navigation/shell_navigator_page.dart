@@ -1,6 +1,5 @@
 import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/core/routes/helpers/navigation_item_model.dart';
 import 'package:flutter_conf_latam/core/routes/helpers/navigation_view_model.dart';
@@ -11,10 +10,11 @@ import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/generated/assets.gen.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 class ShellNavigatorPage extends SignalStatefulWidget {
-  const ShellNavigatorPage({required this.child, super.key});
+  const new({required this.child, super.key});
 
   final Widget child;
 

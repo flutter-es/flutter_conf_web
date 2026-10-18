@@ -6,7 +6,7 @@ import 'package:flutter_conf_latam/l10n/localization_provider.dart';
 import 'package:signals/signals.dart';
 
 class NavigationController {
-  NavigationController() {
+  new() {
     _state = signal(_buildInitialList());
   }
 

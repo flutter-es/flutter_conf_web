@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/core/typography.dart';
 import 'package:flutter_conf_latam/styles/schemes/color_scheme.dart';
 import 'package:flutter_conf_latam/styles/schemes/theme_scheme.dart';
 import 'package:flutter_conf_latam/styles/schemes/typography_scheme.dart';
+import 'package:material_ui/material_ui.dart';
 
 class FclTheme {
   static ThemeData light() {

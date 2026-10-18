@@ -1,13 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
+import 'package:material_ui/material_ui.dart';
 
 class CardContainer extends StatelessWidget {
-  const CardContainer({
-    required this.borderColor,
-    required this.child,
-    super.key,
-  });
+  const new({required this.borderColor, required this.child, super.key});
 
   final Color borderColor;
   final Widget child;
@@ -22,10 +18,7 @@ class CardContainer extends StatelessWidget {
         child: Row(
           crossAxisAlignment: .start,
           children: <Widget>[
-            Container(
-              width: 10,
-              decoration: BoxDecoration(color: borderColor),
-            ),
+            Container(width: 10, decoration: BoxDecoration(color: borderColor)),
             Expanded(
               child: Padding(
                 padding: .symmetric(

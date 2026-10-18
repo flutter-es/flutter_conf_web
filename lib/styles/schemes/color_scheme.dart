@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 class FclColorScheme extends ThemeExtension<FclColorScheme> {
-  FclColorScheme({
+  new({
     required this.background,
     required this.primary,
     required this.secondary,

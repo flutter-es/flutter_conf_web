@@ -1,13 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/enums/enums.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:rive/rive.dart';
 
 class FlutterRiveAnimated extends StatefulWidget {
-  const FlutterRiveAnimated({
-    required this.path,
-    required this.animation,
-    super.key,
-  });
+  const new({required this.path, required this.animation, super.key});
 
   final String path;
   final FlutterConfAnimations animation;

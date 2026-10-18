@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_core/flutter_conf_core.dart';
 import 'package:flutter_conf_latam/core/dependencies.dart';
 import 'package:flutter_conf_latam/core/extensions/extension_methods.dart';
@@ -16,12 +15,13 @@ import 'package:flutter_conf_latam/features/home/presentation/view_model/home_si
 import 'package:flutter_conf_latam/l10n/localization_provider.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 enum _CardState { soldOut, availableNow, comingSoon }
 
 class HomePricing extends SignalWidget {
-  const HomePricing({super.key});
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -113,7 +113,7 @@ class HomePricing extends SignalWidget {
 }
 
 class _PriceGoesUpBadge extends StatelessWidget {
-  const _PriceGoesUpBadge({required this.date});
+  const new({required this.date});
 
   final DateTime date;
 
@@ -152,7 +152,7 @@ class _PriceGoesUpBadge extends StatelessWidget {
 }
 
 class _PricingCard extends SignalWidget {
-  const _PricingCard({required this.ticket});
+  const new({required this.ticket});
 
   final TicketPricingEntity ticket;
 
@@ -334,7 +334,7 @@ class _PricingCard extends SignalWidget {
 }
 
 class _BenefitsSection extends StatelessWidget {
-  const _BenefitsSection({required this.benefits});
+  const new({required this.benefits});
 
   final List<String> benefits;
 

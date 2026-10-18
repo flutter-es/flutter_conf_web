@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
+import 'package:material_ui/material_ui.dart';
 
 typedef TextWithSize = ({String text, double size});
 
 class TitleSubtitleText extends StatelessWidget {
-  const TitleSubtitleText({
+  const new({
     this.title,
     this.subtitle,
     this.textAlign = .center,
@@ -49,10 +49,7 @@ class TitleSubtitleText extends StatelessWidget {
 }
 
 class TitleSubtitleTextContainer extends StatelessWidget {
-  const TitleSubtitleTextContainer({
-    this.crossAxisAlignment = .center,
-    super.key,
-  });
+  const new({this.crossAxisAlignment = .center, super.key});
 
   final CrossAxisAlignment crossAxisAlignment;
 

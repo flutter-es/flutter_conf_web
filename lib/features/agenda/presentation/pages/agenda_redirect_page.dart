@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/config/config.dart';
 import 'package:flutter_conf_latam/core/dependencies.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
@@ -7,11 +6,12 @@ import 'package:flutter_conf_latam/l10n/localization_provider.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/generated/assets.gen.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 import 'package:universal_html/html.dart' as html;
 
 class AgendaRedirectPage extends SignalWidget {
-  const AgendaRedirectPage({super.key});
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {

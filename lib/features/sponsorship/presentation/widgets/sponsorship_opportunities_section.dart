@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/core/widgets/container/responsive_grid.dart';
 import 'package:flutter_conf_latam/core/widgets/container/section_container.dart';
@@ -6,10 +5,11 @@ import 'package:flutter_conf_latam/core/widgets/text/title_subtitle_text.dart';
 import 'package:flutter_conf_latam/l10n/localization_provider.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 class SponsorshipOpportunitiesSection extends SignalWidget {
-  const SponsorshipOpportunitiesSection({super.key});
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -48,9 +48,7 @@ class SponsorshipOpportunitiesSection extends SignalWidget {
       ),
     ];
 
-    final cards = [
-      for (final item in items) _OpportunityCard(item: item),
-    ];
+    final cards = [for (final item in items) _OpportunityCard(item: item)];
 
     return SectionContainer(
       spacing: 40,
@@ -87,7 +85,7 @@ class SponsorshipOpportunitiesSection extends SignalWidget {
 }
 
 class _OpportunityCard extends StatelessWidget {
-  const _OpportunityCard({required this.item});
+  const new({required this.item});
 
   final ({String title, String description, IconData icon}) item;
 

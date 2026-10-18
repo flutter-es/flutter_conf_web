@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/routes/helpers/navigation_item_model.dart';
 import 'package:flutter_conf_latam/core/widgets/menu/extra_buttons.dart';
 import 'package:flutter_conf_latam/core/widgets/menu/language_button.dart';
@@ -8,14 +7,11 @@ import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/generated/assets.gen.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 class MobileDrawerMenu extends SignalWidget {
-  const MobileDrawerMenu({
-    required this.tabItems,
-    required this.onSelect,
-    super.key,
-  });
+  const new({required this.tabItems, required this.onSelect, super.key});
 
   final List<NavigationItemModel> tabItems;
   final ValueSetter<NavigationItemModel> onSelect;
@@ -75,7 +71,7 @@ class MobileDrawerMenu extends SignalWidget {
 }
 
 class _ItemDrawer extends StatelessWidget {
-  const _ItemDrawer({required this.item, required this.onSelect});
+  const new({required this.item, required this.onSelect});
 
   final NavigationItemModel item;
   final ValueSetter<NavigationItemModel> onSelect;

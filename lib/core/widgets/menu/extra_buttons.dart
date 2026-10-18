@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/dependencies.dart';
 import 'package:flutter_conf_latam/core/routes/app_route_path.dart';
 import 'package:flutter_conf_latam/core/seo/seo_config.dart';
@@ -10,12 +9,13 @@ import 'package:flutter_conf_latam/core/widgets/dialog/data_protection_dialog.da
 import 'package:flutter_conf_latam/core/widgets/dialog/main_dialog.dart';
 import 'package:flutter_conf_latam/l10n/localization_provider.dart';
 import 'package:go_router/go_router.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 enum ButtonPosition { row, column }
 
 class ExtraButtons extends SignalWidget {
-  const ExtraButtons({required this.position, super.key});
+  const new({required this.position, super.key});
 
   final ButtonPosition position;
 

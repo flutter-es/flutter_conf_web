@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 
 class NavigationItemModel extends Equatable {
-  const NavigationItemModel({
+  const new({
     required this.label,
     this.route,
     this.isSelected = false,
@@ -33,7 +33,7 @@ class NavigationItemModel extends Equatable {
 }
 
 class SubNavigationItemModel extends Equatable {
-  const SubNavigationItemModel({
+  const new({
     required this.label,
     required this.route,
     this.isSelected = false,

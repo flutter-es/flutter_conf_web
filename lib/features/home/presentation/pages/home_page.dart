@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/dependencies.dart';
 import 'package:flutter_conf_latam/core/utils/page_preloader.dart';
 import 'package:flutter_conf_latam/core/widgets/container/footer.dart';
@@ -17,9 +16,10 @@ import 'package:flutter_conf_latam/features/home/presentation/widgets/home_speak
 import 'package:flutter_conf_latam/features/home/presentation/widgets/home_sponsors.dart';
 import 'package:flutter_conf_latam/features/home/presentation/widgets/home_timeline.dart';
 import 'package:flutter_conf_latam/features/home/presentation/widgets/home_venue.dart';
+import 'package:material_ui/material_ui.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const new({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();

@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
+import 'package:material_ui/material_ui.dart';
 
 class SectionContainer extends StatelessWidget {
-  const SectionContainer({required this.children, this.spacing, super.key});
+  const new({required this.children, this.spacing, super.key});
 
   final List<Widget> children;
   final double? spacing;

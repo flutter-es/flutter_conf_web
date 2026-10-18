@@ -1,7 +1,7 @@
 // Set this to avoid cast for RenderObject
 // ignore_for_file: cast_nullable_to_non_nullable
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 const _shimmerGradient = LinearGradient(
   colors: [Color(0xFF0D4377), Color(0xFF3c7ce2), Color(0xFF0D4377)],
@@ -11,7 +11,7 @@ const _shimmerGradient = LinearGradient(
 );
 
 class Shimmer extends StatefulWidget {
-  const Shimmer({this.linearGradient, this.child, super.key});
+  const new({this.linearGradient, this.child, super.key});
 
   static ShimmerState? of(BuildContext context) {
     return context.findAncestorStateOfType<ShimmerState>();
@@ -81,11 +81,7 @@ class ShimmerState extends State<Shimmer> with SingleTickerProviderStateMixin {
 }
 
 class ShimmerLoading extends StatefulWidget {
-  const ShimmerLoading({
-    required this.child,
-    this.isLoading = false,
-    super.key,
-  });
+  const new({required this.child, this.isLoading = false, super.key});
 
   final Widget child;
   final bool isLoading;
@@ -150,7 +146,7 @@ class _ShimmerLoadingState extends State<ShimmerLoading> {
 }
 
 class _SlidingGradientTransform extends GradientTransform {
-  const _SlidingGradientTransform({required this.slidePercent});
+  const new({required this.slidePercent});
 
   final double slidePercent;
 

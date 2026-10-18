@@ -12,7 +12,7 @@ final privacyPolicySignal = futureSignal<String>(() async {
     'en' => Assets.markdown.privacyPolicyEn,
     _ => Assets.markdown.privacyPolicyEs,
   };
-  return rootBundle.loadString(filePath);
+  return await rootBundle.loadString(filePath);
 });
 
 final termsSignal = futureSignal<String>(() async {
@@ -21,7 +21,7 @@ final termsSignal = futureSignal<String>(() async {
     'en' => Assets.markdown.termsAndConditionsEn,
     _ => Assets.markdown.termsAndConditionsEs,
   };
-  return rootBundle.loadString(filePath);
+  return await rootBundle.loadString(filePath);
 });
 
 void reloadPrivacyTerms() {

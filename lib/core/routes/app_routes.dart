@@ -1,5 +1,4 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/routes/app_route_path.dart';
 import 'package:flutter_conf_latam/core/routes/app_routes_pages.dart';
 import 'package:flutter_conf_latam/core/routes/helpers/seo_route_observer.dart';
@@ -13,12 +12,13 @@ import 'package:flutter_conf_latam/features/speakers/presentation/pages/speakers
 import 'package:flutter_conf_latam/features/splash/presentation/pages/splash.page.dart';
 import 'package:flutter_conf_latam/features/sponsorship/presentation/pages/sponsorship_page.dart';
 import 'package:go_router/go_router.dart';
+import 'package:material_ui/material_ui.dart';
 
 final _mainRoutesKey = GlobalKey<NavigatorState>(debugLabel: 'root');
 final _tabRoutesKeys = GlobalKey<NavigatorState>(debugLabel: 'tabShell');
 
 class AppRoutes {
-  AppRoutes()
+  new()
     : _router = GoRouter(
         initialLocation: '/${AppRoutePath.splash.pathName}',
         routerNeglect: true,

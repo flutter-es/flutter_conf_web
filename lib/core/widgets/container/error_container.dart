@@ -1,12 +1,12 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/core/widgets/button/fcl_button.dart';
 import 'package:flutter_conf_latam/core/widgets/text/title_subtitle_text.dart';
 import 'package:flutter_conf_latam/l10n/localization_provider.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 class ErrorContainer extends SignalWidget {
-  const ErrorContainer({required this.onRetry, super.key});
+  const new({required this.onRetry, super.key});
 
   final VoidCallback onRetry;
 

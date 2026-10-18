@@ -1,9 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
+import 'package:material_ui/material_ui.dart';
 
 class SingleImage extends StatelessWidget {
-  const SingleImage({
+  const new({
     required this.imageUrl,
     required this.size,
     this.borderRadius = 12,
@@ -34,7 +34,7 @@ class SingleImage extends StatelessWidget {
 }
 
 class SingleImageContainer extends StatelessWidget {
-  const SingleImageContainer({
+  const new({
     required this.size,
     this.borderRadius = 12,
     this.image,

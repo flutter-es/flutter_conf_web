@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/l10n/gen/app_localizations.dart';
@@ -6,10 +5,11 @@ import 'package:flutter_conf_latam/l10n/localization_provider.dart';
 import 'package:flutter_conf_latam/l10n/support_locale.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 class LanguageButton extends SignalWidget {
-  const LanguageButton({super.key});
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -61,11 +61,7 @@ class LanguageButton extends SignalWidget {
 }
 
 class _LanguageItem extends StatelessWidget {
-  const _LanguageItem({
-    required this.title,
-    required this.isActive,
-    required this.onTap,
-  });
+  const new({required this.title, required this.isActive, required this.onTap});
 
   final String title;
   final bool isActive;

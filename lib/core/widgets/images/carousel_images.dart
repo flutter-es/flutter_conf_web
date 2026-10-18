@@ -1,12 +1,12 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/extensions/extension_methods.dart';
 import 'package:flutter_conf_latam/core/widgets/container/shimmer_container.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
+import 'package:material_ui/material_ui.dart';
 
 class CarouselImages extends StatefulWidget {
-  const CarouselImages({required this.images, this.aspectRatio = 2, super.key})
+  const new({required this.images, this.aspectRatio = 2, super.key})
     : assert(images.length >= 1, 'Carousel must have at least one image');
 
   final List<String> images;
@@ -131,7 +131,7 @@ class _CarouselImagesState extends State<CarouselImages> {
 }
 
 class _CarouselImageItem extends StatelessWidget {
-  const _CarouselImageItem({
+  const new({
     required this.imagePath,
     required this.widthFactor,
     required this.aspectRatio,
@@ -171,11 +171,7 @@ class _CarouselImageItem extends StatelessWidget {
 }
 
 class _CarouselImageContainer extends StatelessWidget {
-  const _CarouselImageContainer({
-    required this.widthFactor,
-    required this.aspectRatio,
-    this.child,
-  });
+  const new({required this.widthFactor, required this.aspectRatio, this.child});
 
   final double widthFactor;
   final double aspectRatio;

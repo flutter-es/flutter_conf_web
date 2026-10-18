@@ -1,12 +1,12 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/utils/utils.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:material_ui/material_ui.dart';
 
 typedef SocialMediaInfo = ({String iconPath, String linkUrl});
 
 class SocialMediaRow extends StatelessWidget {
-  const SocialMediaRow({required this.socialMediaList, super.key});
+  const new({required this.socialMediaList, super.key});
 
   final List<SocialMediaInfo> socialMediaList;
 
@@ -36,7 +36,7 @@ class SocialMediaRow extends StatelessWidget {
 }
 
 class SocialMediaRowContainer extends StatelessWidget {
-  const SocialMediaRowContainer({super.key});
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {

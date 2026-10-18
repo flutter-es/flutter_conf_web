@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/core/utils/utils.dart';
 import 'package:flutter_conf_latam/core/widgets/container/section_container.dart';
@@ -9,9 +8,10 @@ import 'package:markdown_widget/widget/blocks/leaf/heading.dart';
 import 'package:markdown_widget/widget/blocks/leaf/link.dart';
 import 'package:markdown_widget/widget/blocks/leaf/paragraph.dart';
 import 'package:markdown_widget/widget/markdown.dart';
+import 'package:material_ui/material_ui.dart';
 
 class MarkdownContainer extends StatelessWidget {
-  const MarkdownContainer({required this.markdownData, super.key});
+  const new({required this.markdownData, super.key});
 
   final String markdownData;
 

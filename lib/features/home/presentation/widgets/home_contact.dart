@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_conf_latam/core/dependencies.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
@@ -13,10 +12,11 @@ import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/generated/assets.gen.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 class HomeContact extends SignalWidget {
-  const HomeContact({super.key});
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -82,9 +82,8 @@ class HomeContact extends SignalWidget {
                   label: l10n.menuContactText,
                   buttonSize: .small,
                   icon: const Icon(Icons.mail_outline),
-                  onPressed: () => unawaited(
-                    Utils.launchUrlLink('mailto:$email'),
-                  ),
+                  onPressed: () =>
+                      unawaited(Utils.launchUrlLink('mailto:$email')),
                 ),
               ],
             ),
@@ -118,9 +117,8 @@ class HomeContact extends SignalWidget {
                       child: FclButton.primary(
                         label: l10n.menuContactText,
                         buttonSize: .small,
-                        onPressed: () => unawaited(
-                          Utils.launchUrlLink('mailto:$email'),
-                        ),
+                        onPressed: () =>
+                            unawaited(Utils.launchUrlLink('mailto:$email')),
                       ),
                     ),
                   ],

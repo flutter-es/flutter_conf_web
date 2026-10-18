@@ -1,11 +1,7 @@
 part of '../fcl_button.dart';
 
 class _FclButtonStyle extends ButtonStyle {
-  const _FclButtonStyle({
-    required this.buttonSize,
-    required this.theme,
-    this.textSize,
-  });
+  const new({required this.buttonSize, required this.theme, this.textSize});
 
   final ButtonSize buttonSize;
   final ThemeData theme;

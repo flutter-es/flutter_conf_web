@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/widgets/images/single_image.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
+import 'package:material_ui/material_ui.dart';
 
 class CharacterImage extends StatelessWidget {
-  const CharacterImage({
+  const new({
     required this.imageUrl,
     required this.flagImageUrl,
     required this.size,

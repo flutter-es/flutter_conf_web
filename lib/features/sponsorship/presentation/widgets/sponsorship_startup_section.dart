@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_conf_latam/core/responsive/responsive_context_layout.dart';
 import 'package:flutter_conf_latam/core/utils/utils.dart';
 import 'package:flutter_conf_latam/core/widgets/button/fcl_button.dart';
@@ -8,10 +7,11 @@ import 'package:flutter_conf_latam/core/widgets/container/section_container.dart
 import 'package:flutter_conf_latam/l10n/localization_provider.dart';
 import 'package:flutter_conf_latam/styles/core/colors.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
 
 class SponsorshipStartupSection extends SignalWidget {
-  const SponsorshipStartupSection({super.key});
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -193,9 +193,8 @@ class SponsorshipStartupSection extends SignalWidget {
                       buttonSize: .large,
                       color: FlutterLatamColors.lightGreen,
                       label: l10n.sponsorshipStartupApplyButton,
-                      onPressed: () => _goToMail(
-                        l10n.sponsorshipStartupContactSubject,
-                      ),
+                      onPressed: () =>
+                          _goToMail(l10n.sponsorshipStartupContactSubject),
                     ),
                     Text(
                       l10n.sponsorshipStartupNote,
@@ -226,7 +225,7 @@ class SponsorshipStartupSection extends SignalWidget {
 }
 
 class _StartupBadge extends StatelessWidget {
-  const _StartupBadge({required this.label});
+  const new({required this.label});
 
   final String label;
 
@@ -255,7 +254,7 @@ class _StartupBadge extends StatelessWidget {
 }
 
 class _BenefitItem extends StatelessWidget {
-  const _BenefitItem({required this.text});
+  const new({required this.text});
 
   final String text;
 
