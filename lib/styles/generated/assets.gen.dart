@@ -292,9 +292,7 @@ class $AssetsImagesSponsorsGen {
   List<String> get values => [flutterLogo, venueLogo];
 }
 
-class Assets {
-  const Assets._();
-
+abstract final class Assets {
   static const $AssetsAnimationsGen animations = $AssetsAnimationsGen();
   static const $AssetsFilesGen files = $AssetsFilesGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
