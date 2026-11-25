@@ -8,7 +8,7 @@ import 'package:flutter_conf_latam/styles/generated/assets.gen.dart';
 import 'package:flutter_conf_latam/styles/theme.dart';
 import 'package:material_ui/material_ui.dart';
 import 'package:signals/signals_flutter.dart';
-import 'package:universal_html/html.dart' as html;
+import 'package:web/web.dart' as web;
 
 class AgendaRedirectPage extends SignalWidget {
   const new({super.key});
@@ -23,7 +23,7 @@ class AgendaRedirectPage extends SignalWidget {
 
     if (storeUrl != null) {
       WidgetsBinding.instance.addPostFrameCallback((_) {
-        html.window.location.assign(storeUrl);
+        web.window.location.assign(storeUrl);
       });
     }
 
@@ -123,8 +123,8 @@ class AgendaRedirectPage extends SignalWidget {
   }
 
   String? _storeUrlForUserAgent(Config config) {
-    final ua = html.window.navigator.userAgent.toLowerCase();
-    final maxTouchPoints = html.window.navigator.maxTouchPoints ?? 0;
+    final ua = web.window.navigator.userAgent.toLowerCase();
+    final maxTouchPoints = web.window.navigator.maxTouchPoints;
 
     final isIOS =
         RegExp('iphone|ipad|ipod').hasMatch(ua) ||

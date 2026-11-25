@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:universal_html/html.dart' as html;
+import 'package:web/web.dart' as web;
 
 class MetaTagsManager {
   static void updateMetaTags({
@@ -11,7 +11,7 @@ class MetaTagsManager {
     String? type = 'website',
     List<String>? keywords,
   }) {
-    html.document.title = '$title | Flutter Conf Latam';
+    web.document.title = '$title | Flutter Conf Latam';
 
     _setMetaTag('description', description);
     if (keywords != null && keywords.isNotEmpty) {
@@ -49,14 +49,14 @@ class MetaTagsManager {
   }) {
     if (content.isEmpty) return;
 
-    var element = html.document.querySelector('meta[$attribute="$name"]');
+    final element = web.document.querySelector('meta[$attribute="$name"]');
     if (element == null) {
-      element = html.MetaElement()
+      final meta = web.HTMLMetaElement()
         ..setAttribute(attribute, name)
         ..content = content;
-      html.document.head?.append(element);
-    } else if (element is html.MetaElement) {
-      element.content = content;
+      web.document.head?.append(meta);
+    } else {
+      element.setAttribute('content', content);
     }
   }
 
@@ -65,29 +65,29 @@ class MetaTagsManager {
   }
 
   static void _setCanonicalUrl(String url) {
-    var element = html.document.querySelector('link[rel="canonical"]');
+    final element = web.document.querySelector('link[rel="canonical"]');
     if (element == null) {
-      element = html.LinkElement()
+      final link = web.HTMLLinkElement()
         ..rel = 'canonical'
         ..href = url;
-      html.document.head?.append(element);
-    } else if (element is html.LinkElement) {
-      element.href = url;
+      web.document.head?.append(link);
+    } else {
+      element.setAttribute('href', url);
     }
   }
 
   static void addStructuredData(Map<String, dynamic> structuredData) {
-    final existing = html.document.querySelector('#structured-data');
+    final existing = web.document.querySelector('#structured-data');
     existing?.remove();
 
-    final script = html.ScriptElement()
+    final script = web.HTMLScriptElement()
       ..id = 'structured-data'
       ..type = 'application/ld+json'
       ..text = jsonEncode(structuredData);
-    html.document.head?.append(script);
+    web.document.head?.append(script);
   }
 
   static void removeStructuredData() {
-    html.document.querySelector('#structured-data')?.remove();
+    web.document.querySelector('#structured-data')?.remove();
   }
 }
