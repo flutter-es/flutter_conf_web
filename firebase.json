@@ -9,7 +9,20 @@
     ],
     "headers": [
       {
-        "source": "/main.dart.js",
+        "source": "**",
+        "headers": [
+          {
+            "key": "Cross-Origin-Embedder-Policy",
+            "value": "credentialless"
+          },
+          {
+            "key": "Cross-Origin-Opener-Policy",
+            "value": "same-origin"
+          }
+        ]
+      },
+      {
+        "source": "/main.dart.@(js|mjs|wasm)",
         "headers": [
           {
             "key": "Cache-Control",
