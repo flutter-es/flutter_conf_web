@@ -149,7 +149,7 @@ flutter run -d chrome --dart-define-from-file=keys.json
 ### Build
 
 ```bash
-flutter build web --release --dart-define-from-file=keys.json
+flutter build web --release --wasm --dart-define-from-file=keys.json
 ```
 
 ### Deploy to Firebase Hosting
@@ -283,7 +283,7 @@ python3 -m http.server 8080 --directory build/web
 | `shared_preferences`          | Local storage for preferences |
 | `url_launcher`                | Open URLs in browser          |
 | `timezone`                    | Timezone-aware date/time      |
-| `universal_html`              | Web platform APIs             |
+| `web`                         | Web platform APIs (WASM-safe) |
 | `vector_graphics`             | Optimized vector rendering    |
 
 ## Localization
